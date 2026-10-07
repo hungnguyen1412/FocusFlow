@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "FocusFlow Pomodoro",
+  "version": "0.1.0",
+  "description": "A focused Pomodoro timer with daily goals and statistics.",
+  "permissions": ["storage", "alarms", "notifications", "offscreen"],
+  "action": {
+    "default_title": "FocusFlow",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "icon-128.png"
+    }
+  },
+  "icons": {
+    "128": "icon-128.png"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "scripts": ["timer-engine.js", "background.js"]
+  }
+}

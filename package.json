@@ -1,0 +1,8 @@
+{
+  "name": "focusflow-pomodoro-extension",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs"
+  }
+}

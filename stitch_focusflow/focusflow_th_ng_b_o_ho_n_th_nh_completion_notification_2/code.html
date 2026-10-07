@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><title>FocusFlow</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-tertiary": "#ffffff", "surface-bright": "#fbf9f4", "on-surface": "#1b1c19", "error-container": "#ffdad6", "on-background": "#1b1c19", "on-tertiary-fixed-variant": "#633f00", "on-error": "#ffffff", "on-primary-fixed": "#002114", "inverse-surface": "#30312e", "surface": "#fbf9f4", "error": "#ba1a1a", "primary-container": "#6faf8f", "on-secondary-fixed-variant": "#8b190f", "outline-variant": "#bfc9c1", "surface-container-low": "#f5f4ee", "on-primary-container": "#00412b", "on-secondary": "#ffffff", "tertiary": "#835500", "primary-fixed": "#aef1ce", "tertiary-container": "#d19742", "secondary-container": "#fe6d59", "inverse-on-surface": "#f2f1ec", "on-secondary-container": "#6d0100", "background": "#fbf9f4", "surface-container-highest": "#e4e2dd", "tertiary-fixed": "#ffddb4", "primary": "#296a4e", "inverse-primary": "#93d4b2", "secondary-fixed": "#ffdad4", "on-tertiary-container": "#503200", "on-primary-fixed-variant": "#085137", "primary-fixed-dim": "#93d4b2", "surface-variant": "#e4e2dd", "tertiary-fixed-dim": "#fabb62", "outline": "#707973", "on-primary": "#ffffff", "surface-container-lowest": "#ffffff", "secondary-fixed-dim": "#ffb4a8", "surface-dim": "#dbdad5", "on-secondary-fixed": "#410000", "on-surface-variant": "#404943", "surface-tint": "#296a4e", "surface-container-high": "#e9e8e3", "secondary": "#ac3224", "on-tertiary-fixed": "#291800", "surface-container": "#efeee9", "on-error-container": "#93000a" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "space-xl": "1.5rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "margin": "1rem", "space-md": "0.75rem", "gutter": "0.5rem", "space-lg": "1rem" }, fontFamily: { "headline-lg": ["Space Grotesk"], "label-xs": ["JetBrains Mono"], "body-sm": ["JetBrains Mono"], "headline-sm": ["Space Grotesk"], "display-timer": ["JetBrains Mono"], "body-md": ["JetBrains Mono"], "label-md": ["JetBrains Mono"] }, fontSize: { "headline-lg": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "label-xs": ["10px", { "lineHeight": "12px", "letterSpacing": "0.06em", "fontWeight": "600" }], "body-sm": ["11px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400" }], "headline-sm": ["16px", { "lineHeight": "22px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "display-timer": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.04em", "fontWeight": "600" }], "body-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" }] } } } };</script><style>@layer base { html, body { width: 100%; margin: 0; padding: 0; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } } ::-webkit-scrollbar { width: 4px; } ::-webkit-scrollbar-track { background: transparent; } ::-webkit-scrollbar-thumb { background: #bfc9c1; border-radius: 4px; }</style></head><body class="bg-surface text-on-surface font-body-md text-body-md antialiased min-h-full flex flex-col"><header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-14 px-margin flex items-center justify-between"><div class="flex items-center gap-space-xs min-w-0"><button aria-label="Go back" class="min-w-[44px] min-h-[44px] flex items-center justify-center -ml-2 text-on-surface hover:text-primary transition-colors shrink-0" onclick="history.back()"><span class="material-symbols-outlined text-[20px]">arrow_back</span></button><img alt="FocusFlow Logo" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1XMyQj7NdLsuoHcSiQ6XufhhlZ34N1CDhy4sseAQjWBcrbZnIbzaL-hHgOESX0os_G14WyfBwI8vTU0GNQdKLE0DmE3OmNATD_nNxmj7PBeyawe_tWFRZ8j4meYsQmOb4_sEq8m3c7RaA-CtdrJ2eO3vVAhOR0Sjt3AXwcZ_qR53SiMI0noCAUG-aUKOMz8Qblv1WWzqFeHl3jrL7LLD9PuxfOhjo1C7Ri7HYACavpT-w"/><span class="font-headline-sm text-headline-sm font-bold text-on-surface tracking-tight hidden sm:inline">FocusFlow</span><h1 class="font-headline-sm text-headline-sm text-on-surface tracking-tight ml-space-xs truncate">Xem trước thông báo hoàn thành</h1></div><div class="flex items-center"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col flex-1 w-full pt-14 bg-surface pb-safe"><div class="w-full flex-1 p-margin flex flex-col"><div class="flex flex-col w-full gap-space-md">
+<!-- Status & Context Banner -->
+<div class="flex items-center justify-between px-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">TRÌNH MÔ PHỎNG HIỂN THỊ</span>
+</div>
+<span class="font-label-xs text-label-xs text-primary font-medium bg-primary-fixed/30 px-space-xs py-0.5 rounded">Chrome tiêu chuẩn</span>
+</div>
+<!-- Realistic OS Desktop Notification Card Preview -->
+<div class="relative w-full rounded-xl bg-surface-container-lowest p-space-md shadow-xl overflow-hidden">
+<!-- Subtle top ambient light line -->
+<div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary-container via-primary to-primary-container opacity-80"></div>
+<div class="flex flex-col gap-space-sm">
+<!-- Notification Top Header Row -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<img alt="FocusFlow Logo" class="w-5 h-5 rounded-sm object-contain shadow-sm" src="https://lh3.googleusercontent.com/aida/AEtjO1XMyQj7NdLsuoHcSiQ6XufhhlZ34N1CDhy4sseAQjWBcrbZnIbzaL-hHgOESX0os_G14WyfBwI8vTU0GNQdKLE0DmE3OmNATD_nNxmj7PBeyawe_tWFRZ8j4meYsQmOb4_sEq8m3c7RaA-CtdrJ2eO3vVAhOR0Sjt3AXwcZ_qR53SiMI0noCAUG-aUKOMz8Qblv1WWzqFeHl3jrL7LLD9PuxfOhjo1C7Ri7HYACavpT-w"/>
+<span class="font-headline-sm text-label-md text-on-surface font-semibold tracking-tight">FocusFlow</span>
+<span class="text-on-surface-variant/40 text-[10px]">•</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Vừa xong</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-outline text-[16px] cursor-pointer hover:text-on-surface transition-colors" title="Đóng">close</span>
+</div>
+</div>
+<!-- Notification Core Content -->
+<div class="flex gap-space-sm mt-0.5">
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-space-xs mb-1">
+<span class="material-symbols-outlined text-primary text-[18px]" style="font-variation-settings: 'FILL' 1;">task_alt</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold leading-tight truncate">
+              Hoàn thành phiên tập trung!
+            </h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed line-clamp-2">
+            Đã xong 25 phút làm việc sâu. Đã đến lúc nghỉ ngắn 5 phút để nạp lại năng lượng tinh thần.
+          </p>
+</div>
+</div>
+<!-- Pomodoro Session Progress Indicator (4/4 Completed) -->
+<div class="flex items-center justify-between bg-surface-container-low px-space-sm py-1.5 rounded-lg">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase">CHU KỲ HIỆN TẠI:</span>
+<span class="font-label-xs text-label-xs text-primary font-bold">4/4 HOÀN TẤT</span>
+</div>
+<!-- 4 checked phase status dots -->
+<div class="flex items-center gap-1.5">
+<div class="w-2.5 h-2.5 rounded-full bg-primary flex items-center justify-center text-[7px] text-on-primary font-bold">✓</div>
+<div class="w-2.5 h-2.5 rounded-full bg-primary flex items-center justify-center text-[7px] text-on-primary font-bold">✓</div>
+<div class="w-2.5 h-2.5 rounded-full bg-primary flex items-center justify-center text-[7px] text-on-primary font-bold">✓</div>
+<div class="w-2.5 h-2.5 rounded-full bg-primary flex items-center justify-center text-[7px] text-on-primary font-bold">✓</div>
+</div>
+</div>
+<!-- Interactive OS Action Buttons inside Notification -->
+<div class="grid grid-cols-2 gap-space-xs pt-1">
+<button class="flex items-center justify-center gap-1 py-2 px-space-xs rounded-lg bg-primary hover:bg-on-primary-fixed-variant text-on-primary font-headline-sm text-label-md font-semibold shadow-sm transition-all active:scale-[0.98]" id="btn-start-break">
+<span class="material-symbols-outlined text-[16px]">timer</span>
+<span class="truncate">Nghỉ ngắn (5m)</span>
+</button>
+<button class="flex items-center justify-center gap-1 py-2 px-space-xs rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-headline-sm text-label-md font-medium transition-all active:scale-[0.98]" id="btn-skip-break">
+<span class="material-symbols-outlined text-[16px] text-outline">skip_next</span>
+<span class="truncate">Bỏ qua</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Audio Chime Test Instrument Card -->
+<div class="flex flex-col gap-space-xs bg-surface-container-low p-space-sm rounded-xl">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">notifications_active</span>
+<span class="font-headline-sm text-label-md text-on-surface font-semibold">Âm thanh chuông báo</span>
+</div>
+<span class="font-label-xs text-label-xs text-tertiary font-medium bg-tertiary-fixed/30 px-space-xs py-0.5 rounded">Chuông xoay Tây Tạng (Hòa âm)</span>
+</div>
+<div class="flex items-center justify-between gap-space-sm bg-surface-container-lowest p-space-xs rounded-lg mt-1">
+<div class="flex items-center gap-2 pl-space-xs min-w-0">
+<!-- Frequency Visualizer Sparkline SVG -->
+<svg class="w-24 h-6 text-primary shrink-0" fill="none" viewbox="0 0 96 24">
+<path d="M0 12h8l4-7 4 14 4-10 4 6 4-3 4 8 4-12 4 15 4-7 4 4 4-2 4 6 4-9 4 11 4-6 4 3 4-4 4 7 4-12 8 12h4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75"></path>
+</svg>
+<span class="font-label-xs text-label-xs text-on-surface-variant truncate">432Hz Hòa âm</span>
+</div>
+<button class="flex items-center gap-1 px-space-sm py-1.5 rounded-lg bg-primary-container/25 hover:bg-primary-container/40 text-on-primary-container font-headline-sm text-label-md font-semibold transition-colors" id="btn-test-chime">
+<span class="material-symbols-outlined text-[18px]" id="chime-icon">play_arrow</span>
+<span id="chime-text">Thử chuông</span>
+</button>
+</div>
+</div>
+<!-- Preferences & Toggles Module -->
+<div class="flex flex-col gap-space-xs bg-surface-container-low p-space-sm rounded-xl">
+<div class="flex items-center justify-between pb-1">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider font-semibold">CẤU HÌNH HÀNH VI HỆ THỐNG</span>
+<span class="material-symbols-outlined text-outline text-[16px]">tune</span>
+</div>
+<!-- Toggle 1: Lock Screen Display -->
+<div class="flex items-center justify-between py-1.5 px-space-xs bg-surface-container-lowest rounded-lg">
+<div class="flex items-center gap-space-xs min-w-0 pr-2">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">lock</span>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-label-md text-on-surface font-medium truncate">Màn hình khóa</span>
+<span class="font-body-sm text-label-xs text-on-surface-variant truncate">Hiển thị khi máy tính đang ở chế độ sleep/lock</span>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" id="toggle-lockscreen" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-primary after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Toggle 2: Do Not Disturb During Meetings -->
+<div class="flex items-center justify-between py-1.5 px-space-xs bg-surface-container-lowest rounded-lg">
+<div class="flex items-center gap-space-xs min-w-0 pr-2">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">do_not_disturb_on</span>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-label-md text-on-surface font-medium truncate">Không làm phiền khi họp</span>
+<span class="font-body-sm text-label-xs text-on-surface-variant truncate">Tự động tắt âm khi phát hiện Google Meet / Zoom</span>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" id="toggle-dnd" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-primary after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+<!-- Bottom CTA: Real Browser Push Trigger -->
+<div class="flex flex-col gap-space-xs pt-1">
+<button class="w-full flex items-center justify-center gap-2 py-3 px-space-md rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-headline-sm text-headline-sm font-semibold shadow-sm transition-all active:scale-[0.99]" id="btn-push-preview">
+<span class="material-symbols-outlined text-primary text-[20px]">send_to_mobile</span>
+<span>Gửi thử thông báo đến trình duyệt</span>
+</button>
+<div class="h-4 text-center font-label-xs text-label-xs text-primary transition-opacity duration-300 opacity-0" id="status-feedback">
+      Đã gửi tín hiệu kiểm tra tới Notification Center!
+    </div>
+</div>
+</div>
+<script>
+  (function() {
+    // Chime Preview Simulation
+    const btnTestChime = document.getElementById('btn-test-chime');
+    const chimeIcon = document.getElementById('chime-icon');
+    const chimeText = document.getElementById('chime-text');
+    let isPlaying = false;
+
+    if (btnTestChime) {
+      btnTestChime.addEventListener('click', () => {
+        if (isPlaying) return;
+        isPlaying = true;
+        chimeIcon.textContent = 'volume_up';
+        chimeText.textContent = 'Đang phát...';
+        
+        // Simulating audio chime tone duration
+        setTimeout(() => {
+          isPlaying = false;
+          chimeIcon.textContent = 'play_arrow';
+          chimeText.textContent = 'Thử chuông';
+        }, 1800);
+      });
+    }
+
+    // Trigger Notification Feedback
+    const btnPush = document.getElementById('btn-push-preview');
+    const statusFeedback = document.getElementById('status-feedback');
+    if (btnPush && statusFeedback) {
+      btnPush.addEventListener('click', () => {
+        statusFeedback.textContent = 'Đã gửi tín hiệu kiểm tra tới Notification Center!';
+        statusFeedback.classList.remove('opacity-0');
+        statusFeedback.classList.add('opacity-100');
+        setTimeout(() => {
+          statusFeedback.classList.remove('opacity-100');
+          statusFeedback.classList.add('opacity-0');
+        }, 3200);
+      });
+    }
+
+    // Quick Action button feedbacks
+    const btnStartBreak = document.getElementById('btn-start-break');
+    const btnSkipBreak = document.getElementById('btn-skip-break');
+    if (btnStartBreak && statusFeedback) {
+      btnStartBreak.addEventListener('click', () => {
+        statusFeedback.textContent = 'Đã chọn: Nghỉ ngắn (5m).';
+        statusFeedback.classList.remove('opacity-0');
+        setTimeout(() => statusFeedback.classList.add('opacity-0'), 2500);
+      });
+    }
+    if (btnSkipBreak && statusFeedback) {
+      btnSkipBreak.addEventListener('click', () => {
+        statusFeedback.textContent = 'Đã bỏ qua - Chuẩn bị phiên mới.';
+        statusFeedback.classList.remove('opacity-0');
+        setTimeout(() => statusFeedback.classList.add('opacity-0'), 2500);
+      });
+    }
+  })();
+</script></div></main></body></html>
