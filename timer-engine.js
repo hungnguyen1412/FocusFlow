@@ -16,6 +16,7 @@
       skippedFocus: 0,
       skippedShortBreak: 0,
       skippedLongBreak: 0,
+      notes: [],
     };
   }
 

@@ -1,0 +1,60 @@
+#focusflow-focus-mode-overlay {
+  position: fixed;
+  z-index: 2147483647;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  color: #eef2ed;
+  background: radial-gradient(circle at 50% 20%, rgba(65, 111, 82, .42), transparent 40%), rgba(15, 22, 17, .94);
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+  text-align: center;
+  backdrop-filter: blur(12px);
+}
+
+#focusflow-focus-mode-overlay .focusflow-overlay-card {
+  width: min(420px, 100%);
+  padding: 42px 30px 36px;
+  border: 1px solid rgba(161, 207, 171, .3);
+  border-radius: 22px;
+  background: rgba(27, 39, 30, .88);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, .34);
+}
+
+#focusflow-focus-mode-overlay .focusflow-overlay-mark {
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 22px;
+  border-radius: 16px;
+  color: #ff927b;
+  background: rgba(255, 146, 123, .13);
+  font-size: 30px;
+}
+
+#focusflow-focus-mode-overlay .focusflow-overlay-kicker {
+  color: #a3d2aa;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .18em;
+}
+
+#focusflow-focus-mode-overlay h1 {
+  margin: 14px 0 10px;
+  color: #fff;
+  font: 600 30px/1.15 Georgia, serif;
+}
+
+#focusflow-focus-mode-overlay p {
+  margin: 0 auto 20px;
+  max-width: 310px;
+  color: #d4dfd5;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+#focusflow-focus-mode-overlay span {
+  color: #8fa294;
+  font-size: 10px;
+}

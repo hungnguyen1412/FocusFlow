@@ -3,7 +3,16 @@
   "name": "FocusFlow Pomodoro",
   "version": "0.1.0",
   "description": "A focused Pomodoro timer with daily goals and statistics.",
-  "permissions": ["storage", "alarms", "notifications", "offscreen"],
+  "permissions": ["storage", "alarms", "notifications", "offscreen", "tabs"],
+  "host_permissions": ["<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ],
   "action": {
     "default_title": "FocusFlow",
     "default_popup": "popup.html",
@@ -13,6 +22,22 @@
   },
   "icons": {
     "128": "icon-128.png"
+  },
+  "commands": {
+    "toggle-timer": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+F",
+        "mac": "MacCtrl+Shift+F"
+      },
+      "description": "Start, pause, or resume the timer"
+    },
+    "skip-phase": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+K",
+        "mac": "MacCtrl+Shift+K"
+      },
+      "description": "Skip the current phase and start the next one"
+    }
   },
   "background": {
     "service_worker": "background.js",

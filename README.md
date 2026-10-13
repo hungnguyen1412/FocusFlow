@@ -33,6 +33,31 @@
 - Pause/resume, skip và reset.
 - Kiểm tra Statistics sau khi phase hoàn thành.
 
+## Keyboard shortcuts
+
+- `Ctrl+Shift+F`: Start, pause hoặc resume timer.
+- `Ctrl+Shift+K`: Skip phase hiện tại và tự động bắt đầu phase tiếp theo.
+
+Có thể thay đổi shortcut trong trang quản lý extension shortcuts của Chrome hoặc
+Firefox.
+
+## Backup và giao diện
+
+Trong Settings:
+
+- **Export data** tải settings và toàn bộ daily history thành file JSON.
+- **Import data** khôi phục settings và history từ file backup FocusFlow.
+- Import không ghi đè timer đang chạy.
+- **Theme** hỗ trợ Light, Dark và Sage; lựa chọn được lưu tự động.
+
+## Focus mode, goals và notes
+
+- **Focus mode** chặn overlay trên các domain đã nhập khi Focus đang chạy.
+- Website được nhập mỗi domain một dòng, ví dụ `youtube.com`.
+- Statistics hỗ trợ mục tiêu ngày, tuần và tháng.
+- Có thể nhập session note trong Focus; note được lưu khi session hoàn thành và hiển thị trong Statistics.
+- Settings hiển thị shortcut hiện tại của timer và skip phase; shortcut được thay đổi tại phần quản lý shortcut của browser.
+
 ## Chạy automated tests
 
 ```bash

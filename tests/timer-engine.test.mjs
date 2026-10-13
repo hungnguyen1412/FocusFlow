@@ -30,6 +30,7 @@ test("creates empty daily statistics with the expected counters", () => {
     skippedFocus: 0,
     skippedShortBreak: 0,
     skippedLongBreak: 0,
+    notes: [],
   });
 });
 
