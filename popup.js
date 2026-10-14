@@ -19,7 +19,7 @@ const translations = {
     start: "Start", pause: "Pause", resume: "Resume", skip: "Skip", reset: "Reset",
     today: "Today's statistics", focusSessions: "focus sessions", nextLong: "Long break next", nextShort: "Short break next",
     todayProgress: "Today", goal: "Goal", focused: "focused", streak: "5 day streak", focusTime: "Total focused time",
-    statistics: "Statistics", settings: "Settings", timer: "Focus", pomodoro: "POMODORO", live: "• LIVE",
+    statistics: "Statistics", settings: "Settings", timer: "Focus", pomodoro: "POMODORO", darkMode: "Dark mode", enableDarkMode: "Enable dark mode", disableDarkMode: "Disable dark mode", live: "• LIVE",
     totalFocus: "Total focused time", target: "target", completion: "Completion progress", focusMetric: "Focus", shortMetric: "Short break", longMetric: "Long break",
     sessions: "sessions", times: "times", activity: "Today's activity", weekly: "Weekly performance", completed: "completed", streakTitle: "day streak", streakCopy: "Complete all your daily goals", todayRange: "Today", weekRange: "Week", monthRange: "Month", history: "History", noActivity: "No completed focus sessions", days: "days", weeklyGoal: "Weekly goal", monthlyGoal: "Monthly goal", sessionNotes: "Session notes", noNotes: "No notes yet", notePlaceholder: "What did you accomplish?",
     settingsSubtitle: "Tune your focus rhythm", timerDurations: "Timer durations", dailyGoal: "Daily goal", automation: "Automation", appearance: "Appearance", theme: "Theme", themeHelp: "Choose your visual mood", lightTheme: "Light", darkTheme: "Dark", sageTheme: "Sage", data: "Your data", exportData: "Export data", exportHelp: "Download settings and statistics as JSON", importData: "Import data", importHelp: "Restore a FocusFlow JSON backup", exportSuccess: "Backup exported", importSuccess: "Backup imported", invalidImport: "This backup file is invalid or unsupported.", notifications: "Notifications", sound: "Completion sound", soundHelp: "Play a sound when a phase ends", soundChoice: "Sound", soundChoiceHelp: "Choose the sound for every phase", autoHide: "Auto-hide notification", autoHideHelp: "Automatically dismiss the notification", hideDuration: "Hide after", hideDurationHelp: "How long the notification stays visible",
@@ -36,7 +36,7 @@ const translations = {
     start: "Bắt đầu", pause: "Tạm dừng", resume: "Tiếp tục", skip: "Bỏ qua", reset: "Đặt lại",
     today: "Thống kê hôm nay", focusSessions: "phiên tập trung", nextLong: "Nghỉ dài kế tiếp", nextShort: "Nghỉ ngắn kế tiếp",
     todayProgress: "Hôm nay", goal: "Mục tiêu", focused: "tập trung", streak: "Chuỗi 5 ngày", focusTime: "Tổng thời gian tập trung",
-    statistics: "Thống kê", settings: "Cài đặt", timer: "Tập trung", pomodoro: "POMODORO", live: "• TRỰC TIẾP",
+    statistics: "Thống kê", settings: "Cài đặt", timer: "Tập trung", pomodoro: "POMODORO", darkMode: "Chế độ tối", enableDarkMode: "Bật chế độ tối", disableDarkMode: "Tắt chế độ tối", live: "• TRỰC TIẾP",
     totalFocus: "Tổng thời gian tập trung", target: "mục tiêu", completion: "Tiến độ hoàn thành", focusMetric: "Tập trung", shortMetric: "Nghỉ ngắn", longMetric: "Nghỉ dài",
     sessions: "phiên", times: "lần", activity: "Dòng hoạt động hôm nay", weekly: "Hiệu suất tuần", completed: "hoàn thành", streakTitle: "ngày liên tiếp", streakCopy: "Hoàn thành mọi mục tiêu đặt ra", todayRange: "Hôm nay", weekRange: "Tuần", monthRange: "Tháng", history: "Lịch sử", noActivity: "Chưa có phiên focus hoàn thành", days: "ngày", weeklyGoal: "Mục tiêu tuần", monthlyGoal: "Mục tiêu tháng", sessionNotes: "Ghi chú phiên", noNotes: "Chưa có ghi chú", notePlaceholder: "Bạn đã hoàn thành gì?",
     settingsSubtitle: "Điều chỉnh nhịp tập trung", timerDurations: "Thời lượng timer", dailyGoal: "Mục tiêu hằng ngày", automation: "Tự động hoá", appearance: "Giao diện", theme: "Chủ đề", themeHelp: "Chọn phong cách hiển thị", lightTheme: "Sáng", darkTheme: "Tối", sageTheme: "Sage", data: "Dữ liệu của bạn", exportData: "Xuất dữ liệu", exportHelp: "Tải cài đặt và thống kê dưới dạng JSON", importData: "Nhập dữ liệu", importHelp: "Khôi phục file backup FocusFlow", exportSuccess: "Đã xuất dữ liệu", importSuccess: "Đã nhập dữ liệu", invalidImport: "File backup không hợp lệ hoặc không được hỗ trợ.", notifications: "Thông báo", sound: "Âm thanh hoàn thành", soundHelp: "Phát âm thanh khi phase kết thúc", soundChoice: "Âm thanh", soundChoiceHelp: "Chọn âm thanh cho mọi phase", autoHide: "Tự động ẩn notification", autoHideHelp: "Tự động đóng notification", hideDuration: "Ẩn sau", hideDurationHelp: "Thời gian notification hiển thị",
@@ -188,7 +188,7 @@ function renderShell() {
   app.innerHTML = `
     <header class="topbar">
       <div class="brand"><span class="brand-mark">◷</span><span>FocusFlow</span><span class="status-dot"></span></div>
-      <div class="topbar-meta"><span class="eyebrow">${t("pomodoro")}</span><button class="icon-button" aria-label="Profile">●</button></div>
+      <div class="topbar-meta"><button class="theme-toggle ${model.settings.theme === "dark" ? "on" : ""}" id="theme-toggle" type="button" aria-pressed="${model.settings.theme === "dark"}" aria-label="${model.settings.theme === "dark" ? t("disableDarkMode") : t("enableDarkMode")}"><span class="theme-toggle-icon">${model.settings.theme === "dark" ? "☀" : "☾"}</span><span class="theme-toggle-track"><span class="theme-toggle-thumb"></span></span></button></div>
     </header>
     <main class="main">
       <section class="screen ${activeScreen === "timer" ? "active" : ""}" id="timer-screen"></section>
@@ -205,6 +205,10 @@ function renderShell() {
     activeScreen = button.dataset.nav;
     renderShell();
   }));
+  document.getElementById("theme-toggle")?.addEventListener("click", async () => {
+    await send("UPDATE_SETTINGS", { theme: model.settings.theme === "dark" ? "light" : "dark" });
+    await refresh();
+  });
 }
 
 function renderTimer() {

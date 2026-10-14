@@ -82,6 +82,14 @@ button:focus-visible, input:focus-visible { outline: 2px solid var(--sage); outl
 .topbar-meta { display: flex; align-items: center; gap: 9px; color: var(--muted); }
 .eyebrow { padding: 4px 8px; border-radius: 999px; background: var(--surface-low); font-size: 10px; letter-spacing: .07em; }
 .icon-button { width: 32px; height: 32px; display: grid; place-items: center; border-radius: 50%; background: var(--surface-high); color: var(--muted); }
+.theme-toggle { display: inline-flex; align-items: center; gap: 7px; padding: 5px 6px 5px 8px; border: 1px solid var(--border); border-radius: 999px; background: var(--surface-low); color: var(--muted); transition: border-color .2s, background .2s, color .2s; }
+.theme-toggle:hover { border-color: var(--sage); color: var(--ink); }
+.theme-toggle-icon { width: 13px; font-size: 13px; line-height: 1; }
+.theme-toggle-track { position: relative; width: 27px; height: 15px; display: block; border-radius: 999px; background: var(--surface-high); transition: background .2s; }
+.theme-toggle-thumb { position: absolute; top: 2px; left: 2px; width: 11px; height: 11px; border-radius: 50%; background: var(--muted); box-shadow: var(--shadow); transition: transform .2s, background .2s; }
+.theme-toggle.on { color: var(--amber); border-color: var(--amber); }
+.theme-toggle.on .theme-toggle-track { background: var(--sage); }
+.theme-toggle.on .theme-toggle-thumb { transform: translateX(12px); background: #fff; }
 
 .main { flex: 1; min-height: 0; padding: 10px 12px 60px; overflow-y: auto; scrollbar-width: none; }
 .main::-webkit-scrollbar { width: 0; height: 0; }
